@@ -74,41 +74,4 @@ function Header() {
     </div>
   );
 }
-
-// <div className="mx-auto w-full h-2 flex items-center justify-between p-6 lg:px-8 bg-black text-white">
-// <h2 className="flex items-center space-x-2 md:font-bold md:text-2xl">
-//   <GiNinjaHead />
-//   New's Ninja
-// </h2>
-// <div className="hidden md:flex items-center space-x-20">
-//   <h3 className="flex items-center">
-//     <HiOutlineNewspaper />
-//     Top News
-//   </h3>
-//   <div
-//     tabIndex={0}
-//     className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
-//   >
-//     <div className="collapse-title text-xl font-medium">Category</div>
-//     <div className="collapse-content">
-//       <p>General</p>
-//       <p>Sports</p>
-//       <p>Entertai</p>
-//       <p>General</p>
-//       <p>General</p>
-//       <p>General</p>
-
-//     </div>
-//   </div>
-// </div>
-// <div className="flex items-center space-x-2">
-//   <FiSearch />
-//   <input
-//     type="text"
-//     className="min-w-0 flex-auto rounded-md border-none bg-white/5 px-3.5 py-2 text-white shadow-sm ring-transparent focus:ring-0 outline-0 sm:text-sm sm:leading-6"
-//     placeholder="search for news..."
-//   />
-// </div>
-// </div>
-
 export default Header;
