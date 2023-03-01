@@ -1,8 +1,7 @@
 import React from "react";
 import Newscard from "../Newscard";
-import { use } from "react";
 
-async function fetchNews() {
+export async function fetchNews() {
   return await (
     await fetch(
       `https://newsapi.org/v2/everything?q=${searchParams?.term}&apiKey=${process.env.NEWS_API_KEY}`,

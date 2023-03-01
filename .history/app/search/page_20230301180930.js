@@ -1,11 +1,10 @@
 import React from "react";
 import Newscard from "../Newscard";
-import { use } from "react";
 
-async function fetchNews() {
+export async function fetchNews() {
   return await (
     await fetch(
-      `https://newsapi.org/v2/everything?q=${searchParams?.term}&apiKey=${process.env.NEWS_API_KEY}`,
+      `https://newsapi.org/v2/everything?q=${searchParams}&apiKey=${process.env.NEWS_API_KEY}`,
       {
         // cache: "force-cache" will show cached data
         // cache: "no-cache" will not show cached data
@@ -18,16 +17,7 @@ async function fetchNews() {
 }
 
 function SearchPage({ searchParams }) {
-  const data = use(fetchNews());
-  const articles = data.articles;
-  return (
-    <div className="p-20 mx-20 ">
-      <h1 className="font-semibold text-2xl">
-        You searched for <b>{searchParams?.term}</b>
-      </h1>
-      <Newscard />
-    </div>
-  );
+  console.log(searchParams);
 }
 
 export default SearchPage;

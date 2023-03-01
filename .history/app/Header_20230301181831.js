@@ -19,7 +19,7 @@ function Header() {
   };
 
   const handleSearch = () => {
-    router.push(`/search?term=${input}`);
+    router.push(`/search?/${input}`);
   };
 
   return (

@@ -1,9 +1,8 @@
 import React from "react";
 import Newscard from "../Newscard";
-import { use } from "react";
 
-async function fetchNews() {
-  return await (
+export async function fetchNews() {
+  let res = await (
     await fetch(
       `https://newsapi.org/v2/everything?q=${searchParams?.term}&apiKey=${process.env.NEWS_API_KEY}`,
       {
@@ -15,17 +14,15 @@ async function fetchNews() {
       }
     )
   ).json();
+  return res;
 }
 
 function SearchPage({ searchParams }) {
-  const data = use(fetchNews());
-  const articles = data.articles;
   return (
     <div className="p-20 mx-20 ">
       <h1 className="font-semibold text-2xl">
         You searched for <b>{searchParams?.term}</b>
       </h1>
-      <Newscard />
     </div>
   );
 }

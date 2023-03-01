@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 
 function Header() {
   const [input, setInput] = useState("");
+    export input
   const router = useRouter();
   const handleInput = (event) => {
     event.preventDefault();
@@ -16,9 +17,10 @@ function Header() {
       handleSearch();
       setInput("");
     }
-  };
+};
 
   const handleSearch = () => {
+    console.log(input);
     router.push(`/search?term=${input}`);
   };
 
