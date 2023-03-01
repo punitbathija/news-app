@@ -24,14 +24,12 @@ function Newscard({}) {
           </figure>
           <div className="card-body">
             <h2 className="card-title">{data?.articles[0].author}</h2>
-            <small className="font-light text-xs">
-              Published At{data?.articles[0].publishedAt}
-            </small>
             <p>{data?.articles[0].title}</p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">
                 <Link href={data?.articles[0].url}>Read More</Link>
               </button>
+              <h6>Published At{data?.articles[0].publishedAt}</h6>
             </div>
           </div>
         </div>

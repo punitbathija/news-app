@@ -1,12 +1,10 @@
-import Link from "next/link";
 import React from "react";
 import { use } from "react";
 
 export async function fetchNews() {
-  return await (
-    await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API_KEY}`
-    )
+  const data = fetch(
+    `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API_KEY}`,
+    { cache: "no-cache" }
   ).json();
 }
 
@@ -24,13 +22,10 @@ function Newscard({}) {
           </figure>
           <div className="card-body">
             <h2 className="card-title">{data?.articles[0].author}</h2>
-            <small className="font-light text-xs">
-              Published At{data?.articles[0].publishedAt}
-            </small>
             <p>{data?.articles[0].title}</p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">
-                <Link href={data?.articles[0].url}>Read More</Link>
+                Read More{data?.articles[0].url}
               </button>
             </div>
           </div>
