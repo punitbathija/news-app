@@ -1,9 +1,10 @@
 import React from "react";
 import Newscard from "../Newscard";
+
 export async function fetchNews() {
   return await (
     await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API_KEY}`,
+      `https://newsapi.org/v2/everything?q=${searchParams}&apiKey=${process.env.NEWS_API_KEY}`,
       {
         // cache: "force-cache" will show cached data
         // cache: "no-cache" will not show cached data
@@ -15,8 +16,6 @@ export async function fetchNews() {
   ).json();
 }
 
-function SearchPage({ searchParams }) {
-  return <div>SearchPage</div>;
-}
+function SearchPage({ searchParams }) {}
 
 export default SearchPage;
