@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <h2 className="px-16 py-4 font-bold text-2xl">Top News📰</h2>
       <Newscard />
       <h2 className="flex text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
         Browse News By Category <BiCategory />

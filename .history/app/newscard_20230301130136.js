@@ -1,6 +1,6 @@
 import React from "react";
 
-function Newscard({ data }) {
+function Newscard() {
   return (
     <>
       <div className="flex text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
@@ -28,9 +28,6 @@ export async function getServerSideProps() {
   const res = await fetch(
     `https://newsapi.org/v2/top-headlines/sources?apiKey=${process.env.NEWS_API_KEY}`
   );
-  const data = res.json();
-  console.log(data);
-  return { props: { data } };
 }
 
 export default Newscard;

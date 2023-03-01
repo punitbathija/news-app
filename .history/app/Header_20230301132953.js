@@ -5,13 +5,6 @@ import { BiCategory } from "react-icons/bi";
 
 function Header() {
   const [input, setInput] = useState("");
-  console.log(input);
-  const handleInput = () => {
-    if (e.keycode === "enter") {
-      console.log("Key pressed");
-    }
-  };
-
   return (
     <div className="navbar bg-base-100 flex justify-evenly">
       <div className="navbar-start">
@@ -73,12 +66,9 @@ function Header() {
         </svg>
         <div className="form-control">
           <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
             type="text"
             placeholder="Search..."
             className="input outline-none focus:outline-none focus:ring-0 overflow-hidden"
-            onKeyDown={handleInput}
           />
         </div>
       </div>

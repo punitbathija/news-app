@@ -29,7 +29,6 @@ export async function getServerSideProps() {
     `https://newsapi.org/v2/top-headlines/sources?apiKey=${process.env.NEWS_API_KEY}`
   );
   const data = res.json();
-  console.log(data);
   return { props: { data } };
 }
 

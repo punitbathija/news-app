@@ -25,8 +25,9 @@ function Newscard({ data }) {
 }
 
 export async function getServerSideProps() {
+  const API_KEY = process.env.NEWS_API_KEY;
   const res = await fetch(
-    `https://newsapi.org/v2/top-headlines/sources?apiKey=${process.env.NEWS_API_KEY}`
+    `https://newsapi.org/v2/top-headlines/sources?apiKey=${API_KEY}`
   );
   const data = res.json();
   console.log(data);

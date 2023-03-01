@@ -6,11 +6,12 @@ import { BiCategory } from "react-icons/bi";
 function Header() {
   const [input, setInput] = useState("");
   console.log(input);
-  const handleInput = () => {
-    if (e.keycode === "enter") {
+  const handleSearch = () =>{
+    if(e.keycode === "enter")
+    {
       console.log("Key pressed");
     }
-  };
+  }
 
   return (
     <div className="navbar bg-base-100 flex justify-evenly">
@@ -78,7 +79,7 @@ function Header() {
             type="text"
             placeholder="Search..."
             className="input outline-none focus:outline-none focus:ring-0 overflow-hidden"
-            onKeyDown={handleInput}
+            onKeyDown={}
           />
         </div>
       </div>
