@@ -4,23 +4,20 @@ import React, { useState } from "react";
 import { GiNinjaHead } from "react-icons/gi";
 import { HiOutlineNewspaper } from "react-icons/hi";
 import { BiCategory } from "react-icons/bi";
-import { useRouter } from "next/navigation";
 
 function Header() {
   const [input, setInput] = useState("");
-  const router = useRouter();
   const handleInput = (event) => {
     event.preventDefault();
-    if (!input) return;
     if (event.key === "Enter") {
       handleSearch();
+      if (!input) return;
       setInput("");
     }
   };
 
   const handleSearch = () => {
     console.log(input);
-    router.push(`/search?term=${input}`);
   };
 
   return (
