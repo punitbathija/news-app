@@ -1,11 +1,11 @@
 import Image from "next/image";
+import Header from "./header";
 import styles from "./page.module.css";
 import { BiCategory, BiCodeBlock } from "react-icons/bi";
 import { GiNewspaper } from "react-icons/gi";
 import { IoMdBusiness } from "react-icons/io";
 import { MdSportsCricket, MdLocalMovies } from "react-icons/md";
-import Header from "./Header";
-import Newscard from "./Newscard";
+import Newscard from "./newscard";
 
 export default function Home() {
   return (

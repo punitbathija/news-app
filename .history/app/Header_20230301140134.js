@@ -16,7 +16,7 @@ function Header() {
   };
 
   const handleSearch = () => {
-    console.log(input);
+    console.log("handle search here");
   };
 
   return (

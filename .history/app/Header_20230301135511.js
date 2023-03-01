@@ -7,16 +7,11 @@ import { BiCategory } from "react-icons/bi";
 
 function Header() {
   const [input, setInput] = useState("");
-  const handleInput = (event) => {
-    event.preventDefault();
-    if (event.key === "Enter") {
-      handleSearch();
-      setInput("");
-    }
-  };
-
-  const handleSearch = () => {
+  const handleInput = (e) => {
     console.log(input);
+    if (e.keyCode === "Enter") {
+      console.log("Key pressed");
+    }
   };
 
   return (
@@ -85,7 +80,7 @@ function Header() {
             type="text"
             placeholder="Search..."
             className="input outline-none focus:outline-none focus:ring-0 overflow-hidden"
-            onKeyUp={handleInput}
+            onKeyDown={handleInput}
           />
         </div>
       </div>

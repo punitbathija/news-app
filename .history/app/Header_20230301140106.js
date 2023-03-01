@@ -8,7 +8,6 @@ import { BiCategory } from "react-icons/bi";
 function Header() {
   const [input, setInput] = useState("");
   const handleInput = (event) => {
-    event.preventDefault();
     if (event.key === "Enter") {
       handleSearch();
       setInput("");
@@ -16,7 +15,7 @@ function Header() {
   };
 
   const handleSearch = () => {
-    console.log(input);
+    console.log("handle search here");
   };
 
   return (

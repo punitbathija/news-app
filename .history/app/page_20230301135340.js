@@ -4,15 +4,15 @@ import { BiCategory, BiCodeBlock } from "react-icons/bi";
 import { GiNewspaper } from "react-icons/gi";
 import { IoMdBusiness } from "react-icons/io";
 import { MdSportsCricket, MdLocalMovies } from "react-icons/md";
+// import Newscard from "./newscard";
 import Header from "./Header";
-import Newscard from "./Newscard";
 
 export default function Home() {
   return (
     <>
       <Header />
       <h2 className="px-16 py-4 font-bold text-2xl">Top News📰</h2>
-      <Newscard />
+      {/* <Newscard /> */}
       <h2 className="flex text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
         Browse News By Category <BiCategory />
       </h2>

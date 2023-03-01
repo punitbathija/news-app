@@ -1,4 +1,4 @@
-"use client";
+"use-client";
 
 import React, { useState } from "react";
 import { GiNinjaHead } from "react-icons/gi";
@@ -7,16 +7,11 @@ import { BiCategory } from "react-icons/bi";
 
 function Header() {
   const [input, setInput] = useState("");
-  const handleInput = (event) => {
-    event.preventDefault();
-    if (event.key === "Enter") {
-      handleSearch();
-      setInput("");
+  console.log(input);
+  const handleInput = () => {
+    if (e.key === "enter") {
+      console.log("Key pressed");
     }
-  };
-
-  const handleSearch = () => {
-    console.log(input);
   };
 
   return (
@@ -85,7 +80,7 @@ function Header() {
             type="text"
             placeholder="Search..."
             className="input outline-none focus:outline-none focus:ring-0 overflow-hidden"
-            onKeyUp={handleInput}
+            onKeyDown={handleInput}
           />
         </div>
       </div>
