@@ -3,7 +3,7 @@ import React from "react";
 export async function fetchNews() {
   const data = fetch(
     `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API_KEY}`
-  ).json();
+  );
 }
 
 function Newscard({ data }) {

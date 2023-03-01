@@ -1,9 +1,19 @@
 import React from "react";
 
-export async function fetchNews() {
-  const data = fetch(
-    `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API_KEY}`
-  ).json();
+export async function getServerSideProps() {
+  try {
+    const res = await fetch(
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API_KEY}`,
+      {
+        method: "GET",
+        cache: isDynamic ? "no-cache" : "default",
+      }
+    );
+    const data = res.json();
+    return { props: { data } };
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 function Newscard({ data }) {
@@ -18,11 +28,11 @@ function Newscard({ data }) {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">{data?.articles[0].author}</h2>
-            <p>{data?.articles[0].title}</p>
+            <h2 className="card-title">{data.articles[0].author}</h2>
+            <p>{data.articles[0].title}</p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">
-                Read More{data?.articles[0].url}
+                Read More{data.articles[0].url}
               </button>
             </div>
           </div>

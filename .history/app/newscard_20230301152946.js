@@ -4,6 +4,9 @@ export async function fetchNews() {
   const data = fetch(
     `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API_KEY}`
   ).json();
+  return props{
+    data
+  }
 }
 
 function Newscard({ data }) {

@@ -1,9 +1,19 @@
 import React from "react";
 
-export async function fetchNews() {
-  const data = fetch(
-    `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API_KEY}`
-  ).json();
+export async function getServerSideProps() {
+  try {
+    const res = await fetch(
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API_KEY}`,
+      {
+        method: "GET",
+        cache: isDynamic ? "no-cache" : "default",
+      }
+    );
+    const data = res.json();
+    return { props: { data } };
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 function Newscard({ data }) {
