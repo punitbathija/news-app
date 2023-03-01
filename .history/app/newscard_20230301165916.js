@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import { use } from "react";
-import { BiRefresh } from "react-icons/bi";
 
 export async function fetchNews() {
   return await (
@@ -11,7 +10,7 @@ export async function fetchNews() {
         // cache: "force-cache" will show cached data
         // cache: "no-cache" will not show cached data
         // cache: "no-store" will not store cached data
-        next: { revalidate: 20 },
+        next: { revalidate: 120 },
         // will revalidate cache in 120 seconds
       }
     )

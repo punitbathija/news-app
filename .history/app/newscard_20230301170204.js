@@ -11,7 +11,7 @@ export async function fetchNews() {
         // cache: "force-cache" will show cached data
         // cache: "no-cache" will not show cached data
         // cache: "no-store" will not store cached data
-        next: { revalidate: 20 },
+        next: { revalidate: 120 },
         // will revalidate cache in 120 seconds
       }
     )
@@ -23,6 +23,7 @@ function Newscard({}) {
   const articles = data.articles;
   return (
     <>
+      <BiRefresh onClick={fetchNews} />
       <div className="flex flex-wrap gap-5 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
         {articles.map((article) => {
           return (

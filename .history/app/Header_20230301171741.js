@@ -20,7 +20,6 @@ function Header() {
 
   const handleSearch = () => {
     console.log(input);
-    router.forward(`search/term=${input}`);
   };
 
   return (

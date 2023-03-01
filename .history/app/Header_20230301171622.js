@@ -7,7 +7,6 @@ import { BiCategory } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 
 function Header() {
-  const [input, setInput] = useState("");
   const router = useRouter();
   const handleInput = (event) => {
     event.preventDefault();
@@ -20,7 +19,7 @@ function Header() {
 
   const handleSearch = () => {
     console.log(input);
-    router.forward(`search/term=${input}`);
+    router.push(`/search?term=${input}`);
   };
 
   return (
