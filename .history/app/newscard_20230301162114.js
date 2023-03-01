@@ -15,7 +15,7 @@ function Newscard({}) {
   const articles = data.articles;
   return (
     <>
-      <div className="flex flex-col gap-3 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
+      <div className="flex flex-col  gap-3 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
         {articles.map((article) => {
           return (
             <div className="card w-96 bg-base-100 shadow-xl image-full">
