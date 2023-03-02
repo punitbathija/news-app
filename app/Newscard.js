@@ -33,7 +33,7 @@ function Newscard({}) {
               className="card w-96 bg-base-100 shadow-xl image-full"
             >
               <figure>
-                <Image
+                <img
                   src={
                     article.urlToImage ||
                     "https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=600"
