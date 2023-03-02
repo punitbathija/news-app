@@ -8,7 +8,7 @@ import Link from "next/link";
 
 function Category() {
   return (
-    <div className="flex flex-col gap-5 text-center justify-center justify-items-center px-0.5 md:px-16 md:py-16 font-bold">
+    <div className="flex flex-col gap-5 text-center justify-center justify-items-center mx-1 md:px-16 md:py-16 font-bold">
       <h2 className="flex gap-3 text-center justify-center justify-items-center md:px-16 py-16 font-bold text-2xl">
         <Link href="/">
           <BiArrowBack />

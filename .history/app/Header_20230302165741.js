@@ -61,7 +61,7 @@ function Header() {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-lg md:text-2xl">
+        <a className="btn btn-ghost normal-case text-2xl">
           <GiNinjaHead />
           New&apos;s Ninja
         </a>
@@ -87,7 +87,7 @@ function Header() {
             onChange={(e) => setInput(e.target.value)}
             type="text"
             placeholder="Search..."
-            className=" w-auto input outline-none focus:outline-none focus:ring-0 overflow-hidden"
+            className="input outline-none focus:outline-none focus:ring-0 overflow-hidden"
             onKeyUp={handleInput}
           />
         </div>

@@ -61,7 +61,7 @@ function Header() {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-lg md:text-2xl">
+        <a className="btn btn-ghost normal-case text-2xl">
           <GiNinjaHead />
           New&apos;s Ninja
         </a>

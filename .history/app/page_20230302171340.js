@@ -10,11 +10,11 @@ import Category from "./category/page";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
-      <Header />
+    <>
+      <Header className="max-w-fit" />
       <h2 className="px-16 py-4 font-bold text-2xl">Top News📰</h2>
       <Newscard />
       <Category />
-    </div>
+    </>
   );
 }
