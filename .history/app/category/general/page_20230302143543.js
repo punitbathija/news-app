@@ -8,7 +8,7 @@ function Gerneral({ searchParams }) {
   async function fetchNews() {
     return await (
       await fetch(
-        `https://newsapi.org/v2/top-headlines?category=general&apiKey=${process.env.NEWS_API_KEY}`,
+        `https://newsapi.org/v2/top-headlines?category=business?country=in&apiKey=${process.env.NEWS_API_KEY}`,
         {
           // cache: "force-cache" will show cached data
           // cache: "no-cache" will not show cached data
@@ -22,16 +22,16 @@ function Gerneral({ searchParams }) {
   }
   const data = use(fetchNews());
   const articles = data.articles;
+  console.log(articles);
   return (
     <>
       <Header />
       <h1 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-2xl">
-        <Link href="/category">
+        <Link href="/">
           <BiArrowBack className="" />
-          Categories
         </Link>
       </h1>
-      <div className="flex flex-wrap gap-5 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
+      {/* <div className="flex flex-wrap gap-5 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
         {articles.map((article) => {
           return (
             <div className="card w-96 bg-base-100 shadow-xl image-full">
@@ -61,7 +61,7 @@ function Gerneral({ searchParams }) {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 }

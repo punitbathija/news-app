@@ -26,9 +26,8 @@ function Gerneral({ searchParams }) {
     <>
       <Header />
       <h1 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-2xl">
-        <Link href="/category">
+        <Link href="/">
           <BiArrowBack className="" />
-          Categories
         </Link>
       </h1>
       <div className="flex flex-wrap gap-5 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">

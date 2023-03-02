@@ -8,7 +8,7 @@ function Gerneral({ searchParams }) {
   async function fetchNews() {
     return await (
       await fetch(
-        `https://newsapi.org/v2/top-headlines?category=general&apiKey=${process.env.NEWS_API_KEY}`,
+        `https://newsapi.org/v2/language=en?category=general&apiKey=${process.env.NEWS_API_KEY}`,
         {
           // cache: "force-cache" will show cached data
           // cache: "no-cache" will not show cached data
@@ -26,7 +26,7 @@ function Gerneral({ searchParams }) {
     <>
       <Header />
       <h1 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-2xl">
-        <Link href="/category">
+        <Link href="/">
           <BiArrowBack className="" />
           Categories
         </Link>
