@@ -15,7 +15,7 @@ function Category() {
         </Link>
         Browse News By Category <BiCategory />
       </h2>
-      <div className="flex flex-col justify-between mx-4 md:mx-24 gap-3 md:flex-row">
+      <div className="flex flex-col justify-between md:mx-24 gap-3 md:flex-row">
         <div className="card w-96 bg-neutral text-neutral-content">
           <div className="card-body items-center text-center">
             <h2 className="card-title">

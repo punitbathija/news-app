@@ -8,14 +8,14 @@ import Link from "next/link";
 
 function Category() {
   return (
-    <div className="flex flex-col gap-5 text-center justify-center justify-items-center md:px-16 md:py-16 font-bold">
-      <h2 className="flex gap-3 text-center justify-center justify-items-center md:px-16 py-16 font-bold text-2xl">
+    <div className="flex flex-col gap-5 text-center justify-center justify-items-center px-16 py-16 font-bold">
+      <h2 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-2xl">
         <Link href="/">
           <BiArrowBack />
         </Link>
         Browse News By Category <BiCategory />
       </h2>
-      <div className="flex flex-col justify-between mx-4 md:mx-24 gap-3 md:flex-row">
+      <div className="flex flex-col justify-between mx-24 gap-3 md:flex-row">
         <div className="card w-96 bg-neutral text-neutral-content">
           <div className="card-body items-center text-center">
             <h2 className="card-title">

@@ -8,7 +8,7 @@ function Gerneral({ searchParams }) {
   async function fetchNews() {
     return await (
       await fetch(
-        `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${process.env.NEWS_API_KEY}`,
+        `https://newsapi.org/v2/top-headlines?category=sports&apiKey=${process.env.NEWS_API_KEY}`,
         {
           // cache: "force-cache" will show cached data
           // cache: "no-cache" will not show cached data
@@ -32,7 +32,7 @@ function Gerneral({ searchParams }) {
         </Link>
       </h1>
       <h1 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-3xl text-stone-200 ">
-        Business News
+        Sports News
       </h1>
       <div className="flex flex-wrap gap-5 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
         {articles.map((article) => {

@@ -1,22 +1,15 @@
 import React from "react";
+import Newscard from "../Newscard";
 import Link from "next/link";
 import { use } from "react";
 import { BiArrowBack } from "react-icons/bi";
-import Header from "../../Header";
+import Header from "../Header";
 
-function Gerneral({ searchParams }) {
+function SearchPage({ searchParams }) {
   async function fetchNews() {
     return await (
       await fetch(
-        `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${process.env.NEWS_API_KEY}`,
-        {
-          // cache: "force-cache" will show cached data
-          // cache: "no-cache" will not show cached data
-          // cache: "no-store" will not store cached data
-          // cache: "only-if-cached",
-          next: { revalidate: 20 },
-          // will revalidate cache in 120 seconds
-        }
+        `https://newsapi.org/v2/everything?q=${searchParams?.term}&apiKey=${process.env.NEWS_API_KEY}`
       )
     ).json();
   }
@@ -26,13 +19,10 @@ function Gerneral({ searchParams }) {
     <>
       <Header />
       <h1 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-2xl">
-        <Link href="/category">
+        <Link href="/">
           <BiArrowBack className="" />
-          Categories
         </Link>
-      </h1>
-      <h1 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-3xl text-stone-200 ">
-        Business News
+        You searched for {searchParams?.term}
       </h1>
       <div className="flex flex-wrap gap-5 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
         {articles.map((article) => {
@@ -69,4 +59,4 @@ function Gerneral({ searchParams }) {
   );
 }
 
-export default Gerneral;
+export default SearchPage;
