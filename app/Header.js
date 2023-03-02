@@ -87,7 +87,7 @@ function Header() {
             onChange={(e) => setInput(e.target.value)}
             type="text"
             placeholder="Search..."
-            className=" w-auto input outline-none focus:outline-none focus:ring-0 overflow-hidden"
+            className=" w-auto input shrink outline-none focus:outline-none focus:ring-0 overflow-hidden"
             onKeyUp={handleInput}
           />
         </div>
