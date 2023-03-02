@@ -52,7 +52,7 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="/category">
+              <a>
                 <BiCategory />
                 Category
               </a>
