@@ -1,16 +1,22 @@
 import React from "react";
-import Newscard from "../Newscard";
 import Link from "next/link";
 import { use } from "react";
 import { BiArrowBack } from "react-icons/bi";
-import Header from "../Header";
-import Image from "next/image";
+import Header from "../../Header";
 
-function SearchPage({ searchParams }) {
+function Gerneral({ searchParams }) {
   async function fetchNews() {
     return await (
       await fetch(
-        `https://newsapi.org/v2/everything?q=${searchParams?.term}&apiKey=${process.env.NEWS_API_KEY}`
+        `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${process.env.NEWS_API_KEY}`,
+        {
+          // cache: "force-cache" will show cached data
+          // cache: "no-cache" will not show cached data
+          // cache: "no-store" will not store cached data
+          // cache: "only-if-cached",
+          next: { revalidate: 20 },
+          // will revalidate cache in 120 seconds
+        }
       )
     ).json();
   }
@@ -20,10 +26,13 @@ function SearchPage({ searchParams }) {
     <>
       <Header />
       <h1 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-2xl">
-        <Link href="/">
+        <Link href="/category">
           <BiArrowBack className="" />
+          Categories
         </Link>
-        You searched for {searchParams?.term}
+      </h1>
+      <h1 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-3xl text-stone-200 ">
+        Business News
       </h1>
       <div className="flex flex-wrap gap-5 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
         {articles.map((article) => {
@@ -33,7 +42,7 @@ function SearchPage({ searchParams }) {
               className="card w-96 bg-base-100 shadow-xl image-full"
             >
               <figure>
-                <Image
+                <img
                   src={
                     article.urlToImage ||
                     "https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -63,4 +72,4 @@ function SearchPage({ searchParams }) {
   );
 }
 
-export default SearchPage;
+export default Gerneral;
