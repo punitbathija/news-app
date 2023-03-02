@@ -10,7 +10,7 @@ function SearchPage({ searchParams }) {
   async function fetchNews() {
     return await (
       await fetch(
-        `https://newsapi.org/v2/everything?q=${searchParams?.term}&from=2023-03-01&to=2023-03-01&sortBy=popularity&apiKey=${process.env.NEWS_API_KEY}`
+        `https://newsapi.org/v2/everything?q=${searchParams?.term}from=2023-03-01&to=2023-03-01&sortBy=popularity&apiKey=${process.env.NEWS_API_KEY}`
       )
     ).json();
   }
