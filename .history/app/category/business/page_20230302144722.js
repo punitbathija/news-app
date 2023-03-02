@@ -31,7 +31,6 @@ function Gerneral({ searchParams }) {
           Categories
         </Link>
       </h1>
-      <h1>Business News</h1>
       <div className="flex flex-wrap gap-5 text-center justify-center justify-items-center px-16 py-16 font-bold text-2xl">
         {articles.map((article) => {
           return (
