@@ -27,7 +27,7 @@ function Category() {
             </Link>
           </div>
         </div>
-        <div className="card mx-auto w-80 text-center bg-neutral text-neutral-content">
+        <div className="card w-80 text-center bg-neutral text-neutral-content">
           <div className="card-body items-center text-center">
             <h2 className="card-title">
               Business
@@ -38,7 +38,7 @@ function Category() {
             </Link>
           </div>
         </div>
-        <div className="card mx-auto w-80 text-center bg-neutral text-neutral-content">
+        <div className="card w-80 text-center bg-neutral text-neutral-content">
           <div className="card-body items-center text-center">
             <h2 className="card-title">
               Sports
@@ -49,7 +49,7 @@ function Category() {
             </Link>
           </div>
         </div>
-        <div className="card mx-auto w-80 text-center bg-neutral text-neutral-content ">
+        <div className="card w-80 text-center bg-neutral text-neutral-content ">
           <div className="card-body items-center text-center">
             <h2 className="card-title">
               Technology
@@ -60,7 +60,7 @@ function Category() {
             </Link>
           </div>
         </div>
-        <div className="card mx-auto w-80 text-center bg-neutral text-neutral-content mb-3">
+        <div className="card w-80 text-center bg-neutral text-neutral-content mb-3">
           <div className="card-body items-center text-center">
             <h2 className="card-title">
               Entertainment
