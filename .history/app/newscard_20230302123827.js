@@ -11,7 +11,7 @@ export async function fetchNews() {
         // cache: "force-cache" will show cached data
         // cache: "no-cache" will not show cached data
         // cache: "no-store" will not store cached data
-        // cache: "only-if-cached",
+        cache: "only-if-cached",
         next: { revalidate: 20 },
         // will revalidate cache in 120 seconds
       }
