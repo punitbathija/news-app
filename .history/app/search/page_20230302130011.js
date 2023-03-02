@@ -18,9 +18,9 @@ function SearchPage({ searchParams }) {
   return (
     <>
       <Header />
-      <h1 className="flex justify-start align-middle gap-2 text-center align-center p-10 mx-10 font-semibold text-2xl">
+      <h1 className="flex justify-start gap-2 text-center align-center p-10 mx-10 font-semibold text-2xl">
         <Link href="/">
-          <BiArrowBack className="" />
+          <BiArrowBack className="text-center justify-center align-middle" />
         </Link>
         You searched for {searchParams?.term}
       </h1>
